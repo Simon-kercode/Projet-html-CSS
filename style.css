@@ -2,3 +2,42 @@
     --jaune-moutarde: #D7AB3F;
     --bleu: #4C7AED;
 }
+html, body {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#inscriptionLink, #contactLink {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#inscriptionLink {
+    background-color: var(--jaune-moutarde);
+}
+
+#contactLink {
+    background-color: var(--bleu);
+}
+#woodBanner {
+    width: 360px;
+    height: 74px;
+    position: relative;
+}
