@@ -7,12 +7,6 @@
     margin: 0;
     padding: 0;
 }
-body {
-    background-image: url(images/fond-texture-bois-marron-blanc.jpg);
-    background-size:  100% 74px;
-    background-repeat: no-repeat;
-    background-position: 0 50px;
-}
 
 .container {
     width: 100%;
@@ -23,7 +17,7 @@ a {
     text-decoration: none;
     color: black;
 }
-
+/* ==================header================= */
 #boutonsHaut {
     display: flex;
 }
@@ -43,7 +37,28 @@ a {
     text-align: right;
 }
 
+#banner {
+    position: relative;
+}
+
+#fondHeader {
+    width: 100%;
+    height: 74px;
+}
+
 header #logoEcole {
     width: 223px;
+    position: absolute;
+    left: 70px;
+    top: -50px;
+}
+
+#burger {
+    display: block;
+    font-size: 2.2rem;
     
+    
+}
+nav ul {
+    display: none;
 }
