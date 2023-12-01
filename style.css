@@ -8,6 +8,27 @@
     padding: 0;
 }
 
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* poppins-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    src: url('fonts/poppins-v20-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+body {
+    font-family: 'Poppins';
+}
 .container {
     width: 100%;
     margin: 0 auto;
@@ -24,7 +45,8 @@ a {
 
 #inscriptionLink, #contactLink {
     width: 50%;
-    padding: 16px;  
+    padding: 16px; 
+    font-family: 'Poppins';
 }
 
 #inscriptionLink {
@@ -54,11 +76,14 @@ header #logoEcole {
 }
 
 #burger {
-    display: block;
     font-size: 2.2rem;
-    
-    
+    position: relative;
+    bottom: 70px;
+    margin-left: 20px;
+    color: white;
 }
+
 nav ul {
     display: none;
 }
+

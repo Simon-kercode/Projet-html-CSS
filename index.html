@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecole Sainte Marie</title>
+    <!-- slider -->
+    <link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+    <!-- burger -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +24,7 @@
             <nav id="menuPrincipal">
                 <!-- menu burger -->
                 <div id="burger">
-                    <i class="fa-solid fa-bars" style="color: #000000;"></i>
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             <ul>
                 <li><a href="index.html" class="choix">Accueil</a></li>
@@ -30,5 +35,26 @@
             </nav>
         </section>
     </header>
+    <main class="container">
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="images/slider1.jpg"  alt="ecole-aerien" data-transition="fade"/>
+                <img src="images/slider2.jpg"  alt="ecole-facade" data-transition="fade"/>
+                <img src="images/slider3.jpg"  alt="cour" data-transition="fade"/>
+            </div>
+        </div>
+        <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+        <script src="scripts/jquery.nivo.slider.js"></script>
+        <script type="text/javascript">
+            // script slider
+            $(window).load(function() {
+            $('#slider').nivoSlider();
+            });
+            // script burger
+            $("#menuPrincipal #burger i").click(function() {
+            $("#menuPrincipal ul").addClass("on").slideToggle(500)
+            });
+        </script>
+    </main>
 </body>
 </html>
