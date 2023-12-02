@@ -1,6 +1,7 @@
 :root {
-    --jaune-moutarde: #D7AB3F;
+    --jaune-moutarde: #C99E34;
     --bleu: #4C7AED;
+    --gris: #5A606E;
 }
 
 * {
@@ -28,8 +29,11 @@
 
 body {
     font-family: 'Poppins';
+    background: url(images/fond-op.jpg) repeat;
+    background-size: 70%;
 }
 .container {
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
@@ -38,6 +42,9 @@ a {
     text-decoration: none;
     color: black;
 }
+ul {
+    list-style-type: none;
+}
 /* ==================header================= */
 #boutonsHaut {
     display: flex;
@@ -45,7 +52,7 @@ a {
 
 #inscriptionLink, #contactLink {
     width: 50%;
-    padding: 16px; 
+    padding: 8px 16px; 
     font-family: 'Poppins';
 }
 
@@ -60,30 +67,34 @@ a {
 }
 
 #banner {
-    position: relative;
+    height: 80px;
+    background: url(images/fond-texture-bois-marron-blanc.jpg);
+    background-size: 100% 75px;
+    background-repeat: repeat-x;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
-#fondHeader {
-    width: 100%;
-    height: 74px;
+header #banner #logoEcole {
+   position: relative;
+   top: -10px;
+   width: 220px;
+   
 }
-
-header #logoEcole {
-    width: 223px;
-    position: absolute;
-    left: 70px;
-    top: -50px;
+#menuPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 #burger {
     font-size: 2.2rem;
-    position: relative;
-    bottom: 70px;
-    margin-left: 20px;
-    color: white;
+    margin-top: -20px;
 }
 
 nav ul {
     display: none;
 }
+
+
 
