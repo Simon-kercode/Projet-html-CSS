@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecole Sainte Marie</title>
-    <!-- slider -->
+    <!-- stylesheet slider -->
     <link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
-    <!-- burger -->
+    <!-- stylesheet burger -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -34,6 +34,7 @@
                 </ul>
             </nav>
     </header>
+    <!-- slider -->
     <main class="container">
         <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider">
@@ -42,14 +43,34 @@
                 <img src="images/slider3.jpg"  alt="cour" data-transition="fade"/>
             </div>
         </div>
-        <article id="texteAccueil" class="container">
-            <h1>Bienvenue sur le site de l'école Sainte Marie</h1>
-            <p>C'est avec grand plaisir que nous vous proposons de découvrir notre école, 
-                notre organisation ainsi que nos activités à travers les différentes rubriques.
-                N'hésitez pas à nous contacter par mail ou par téléphone. 
-                Notre équipe reste à votre disposition pour tout questionnement.
-                Bonne visite et à bientôt.</p>
+        <!-- texte d'accueil + photo d'enseignants (PENSER A METTRE PHOTO SUR GRAND ECRAN)-->
+        <article id="accueil" class="container">
+            <div id="texteAccueil">
+                <h1>Bienvenue sur le site de l'école Sainte Marie</h1>
+                <p>C'est avec grand plaisir que nous vous proposons de découvrir notre école, 
+                    notre organisation ainsi que nos activités à travers les différentes rubriques.
+                    N'hésitez pas à nous contacter par mail ou par téléphone. 
+                    Notre équipe reste à votre disposition pour tout questionnement.
+                    Bonne visite et à bientôt.</p>
+                <div id="boutonAccueil"><a href="#" id="lienAccueil">En savoir plus sur l'école</a></div>
+            </div>
+            <img src="images/equipe.JPEG" alt="enseignants">
         </article>
+        <!-- dates importantes -->
+        <section id="agenda" class="container">
+            <h2>L'agenda de l'école</h2>
+            <ul>
+                <li><img id="masque" src="images/masque.svg" alt="masque">
+                    <p>Carnaval: défilé suivi d'un repas.<br><span class="date">13 Avril 2024</span></p>
+                </li>
+                <li><img id="porte" src="images/porte.svg" alt="porte-ouverta">
+                    <p>Portes ouvertes 2024:<br><span class="date">6 Avril 2024</span> de 10h à 12h</p>
+                </li>
+                <li><img id="ballons" src="images/icone-ballons.png" alt="ballons">
+                    <p>Portes ouvertes 2024:<br><span class="date">6 Avril 2024</span></p>
+                </li>
+            </ul>
+        </section>
         <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
         <script src="scripts/jquery.nivo.slider.js"></script>
         <script type="text/javascript">

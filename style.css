@@ -1,14 +1,15 @@
 :root {
-    --jaune-moutarde: #C99E34;
+    --jaune-moutarde: #cba034;
     --bleu: #4C7AED;
-    --gris: #5A606E;
 }
 
 * {
     margin: 0;
     padding: 0;
 }
-
+html, body {
+    overflow-x: hidden;
+}
 /* poppins-regular - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -29,6 +30,7 @@
 
 body {
     font-family: 'Poppins';
+    font-size: 14px;
     background: url(images/fond-op.jpg) repeat;
     background-size: 70%;
 }
@@ -52,7 +54,7 @@ ul {
 
 #inscriptionLink, #contactLink {
     width: 50%;
-    padding: 8px 16px; 
+    padding: 8px 15px; 
     font-family: 'Poppins';
 }
 
@@ -92,9 +94,79 @@ header #banner #logoEcole {
     margin-top: -20px;
 }
 
-nav ul {
+#menuPrincipal ul {
+    margin-bottom: 15px;
+    line-height: 30px;
     display: none;
 }
+#menuPrincipal ul li {
+    transition: 0.3s;
+}
+#menuPrincipal ul li:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari et chrome */
+    -moz-transform:scale(1.2); /* Firefox */
+    transform: scale(1.2);
+}
+/* ================texte accueil=============== */
+#accueil {
+    display: flex;
+    border: solid var(--jaune-moutarde) 3px;
+    transition: 0.3s;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255 ,255, 0.3) ;
+}
+#accueil #texteAccueil h1 {
+    margin-bottom: 20px;
+}
+#accueil #texteAccueil p {
+    line-height: 30px;
+}
+#accueil #texteAccueil #boutonAccueil {
+    text-align: right;
+    margin: 40px 20px 20px 0;
+    
+}
+#accueil #texteAccueil #lienAccueil {
+    color: white;
+    background-color: var(--bleu);
+    padding: 15px;
+    border-radius: 50px;
+}
+#accueil img {
+    display: none;
 
+}
 
+/* ==================agenda de l'école============= */
+
+#agenda {
+    margin: 40px 15px;
+}
+#agenda h2 {
+    margin-bottom: 20px;
+}
+#agenda ul {
+    display: flex;
+    flex-direction: column;
+}
+#agenda ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: rgba(203, 160, 52, 0.5);
+    border-radius: 20px;
+    padding: 10px;
+}
+#agenda ul li #masque,
+#agenda ul li #porte,
+#agenda ul li #ballons {
+    width: 32px;
+    margin-right: 15px;
+
+}
+#agenda ul li .date {
+    font-weight: bold;
+}
 
