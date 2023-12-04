@@ -37,7 +37,7 @@
     <!-- slider -->
     <main class="container">
         <div class="slider-wrapper theme-default">
-            <div id="slider" class="nivoSlider">
+            <div id="slider-accueil" class="nivoSlider">
                 <img src="images/slider1.jpg"  alt="ecole-aerien" data-transition="fade"/>
                 <img src="images/slider2.jpg"  alt="ecole-facade" data-transition="fade"/>
                 <img src="images/slider3.jpg"  alt="cour" data-transition="fade"/>
@@ -64,19 +64,66 @@
                     <p>Carnaval: défilé suivi d'un repas.<br><span class="date">13 Avril 2024</span></p>
                 </li>
                 <li><img id="porte" src="images/porte.svg" alt="porte-ouverta">
-                    <p>Portes ouvertes 2024:<br><span class="date">6 Avril 2024</span> de 10h à 12h</p>
+                    <p>Portes ouvertes 2024 :<br><span class="date">6 Avril 2024</span> de 10h à 12h</p>
                 </li>
                 <li><img id="ballons" src="images/icone-ballons.png" alt="ballons">
-                    <p>Portes ouvertes 2024:<br><span class="date">6 Avril 2024</span></p>
+                    <p>Kermesse 2024 :<br><span class="date">30 Juin 2024</span></p>
                 </li>
             </ul>
+            <div id="boutonAgenda"><a href="#" id="lienAgenda">L'agenda complet</a></div>
         </section>
+        <section id="news" class="container">
+            <h2>Les dernières actualités</h2>
+            <!-- slider news -->
+            <div class="slider-wrapper theme-default">
+                <div id="slider-news" class="nivoSlider">
+                    <img src="images/belle-ile-redim.jpg"  alt="sejour-belle-ile" data-transition="fade" title="#htmlcaption1"/>
+                    <img src="images/lipdub-redim.jpg"  alt="lipdub" data-transition="fade" title="#htmlcaption2"/>
+                    <img src="images/contes-orientaux-redim.jpg"  alt="contes-orientaux" data-transition="fade" title="#htmlcaption3"/>
+                </div>
+                <div id="htmlcaption1" class="nivo-html-caption">
+                    <a href="#"><h3>Séjour à belle Ile en mer Cycle 3</h3></a>
+                </div>
+                <div id="htmlcaption2" class="nivo-html-caption">
+                    <a href="#" style="color: black;"><h3>Lip'Dub de l'école</h3></a>
+                </div>
+                <div id="htmlcaption3" class="nivo-html-caption">
+                    <a href="#"><h3>Contes orientaux Cycle 2</h3></a>
+                </div>
+            </div>
+            <div id="boutonNews"><a href="#" id="allNews">Toute l'actualité de l'école</a></div>
+        </section>
+        <!-- footer -->
+        <footer id="pied">
+            <aside id="bas" class="container">
+                <div id="colonne1" class="colonne">   
+                    <img src="images/vignette-logo-grand-champ-removebg-preview.png" alt="grand-champ" id="logo-gc">
+                    <address>
+                        Ecole Sainte Marie<br>
+                        6Route de Penhoët<br>
+                        56390 Grand-Champ<br>
+                        02 97 66 76 33
+                    </address>
+                </div>
+                <div id="colonne2" class="colonne">
+                    <img src="images/logo-ec56.svg" alt="ecole-catholique" id="logo-ec">
+                    <a href="#">Contact</a>
+                    <a href="#">Mentions légales</a>
+                </div>
+            </aside>
+            <div id="copyright">
+                <p>Copyright &copy; 2023 Greta Bretagne Sud - Projet d'étude</p>
+            </div>
+        </footer>
         <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
         <script src="scripts/jquery.nivo.slider.js"></script>
         <script type="text/javascript">
             // script slider
             $(window).load(function() {
-            $('#slider').nivoSlider();
+            $('#slider-accueil').nivoSlider();
+            });
+            $(window).load(function() {
+            $('#slider-news').nivoSlider();
             });
             // script burger
             $("#menuPrincipal #burger i").click(function() {
