@@ -99,11 +99,18 @@ header #banner #logoEcole {
     line-height: 30px;
     display: none;
 }
+
 #menuPrincipal ul li {
     transition: 0.3s;
 }
 #menuPrincipal ul li a {
     color: black;
+}
+#menuPrincipal #menuVie,
+#menuPrincipal #menuCycles,
+#menuPrincipal #menuAssoc {
+    margin-left: 30px;
+    font-size: 0.8rem;
 }
 #menuPrincipal ul li:hover{
     -ms-transform: scale(1.2); /* IE 9 */
@@ -111,6 +118,11 @@ header #banner #logoEcole {
     -moz-transform:scale(1.2); /* Firefox */
     transform: scale(1.2);
 }
+.on {
+    font-size: 1.1rem;
+    border-bottom: solid 3px var(--jaune-moutarde);
+}
+
 /* ================texte accueil=============== */
 #accueil {
     display: flex;
@@ -195,7 +207,7 @@ header #banner #logoEcole {
     background: transparent;
     bottom: 20px;
     width: 50%;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 #news #boutonNews {
@@ -252,5 +264,29 @@ header #banner #logoEcole {
 }
 /* ===============responsive============= */
 @media screen and (min-width: 768px) {
-    
+    /* =================header============= */
+    #banner {
+        justify-content: flex-start;
+    }
+    #boutonsHaut {
+        justify-content: flex-end;
+    }
+    #inscriptionLink, #contactLink {
+        text-align: left;
+        width: 25%;
+    }
+
+    #burger {
+        display: none;
+    }
+    #banner #logoEcole {
+        margin-left: 15px;
+    }
+    #menuPrincipal {
+        flex-direction: row;
+        position: relative;
+        bottom: 100px;
+    }
+}   #menuPrincipal ul {
+        display: flex;
 }

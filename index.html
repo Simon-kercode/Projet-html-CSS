@@ -22,17 +22,36 @@
                 </a>
         </div>        
         <nav id="menuPrincipal">
-                <!-- menu burger -->
-                <div id="burger">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <ul>
-                    <li><a href="index.html" class="choix">Accueil</a></li>
-                    <li><a href="#">Vie de l'école</a></li>
-                    <li><a href="#">Cycles</a></li>
-                    <li><a href="#">Associations</a></li>
-                </ul>
-            </nav>
+            <!-- menu burger -->
+            <div id="burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <!-- menu de navigation -->
+            <ul id="menu1">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#" id="vie">Vie de l'école</a></li>
+                    <ul id="menuVie">
+                        <li><a href="#">Informations générales</a></li>
+                        <li><a href="#">Vacances scolaires</a></li>
+                        <li><a href="#">Notre école en photo</a></li>
+                        <li><a href="#">Filière bilingue (breton)</a></li>
+                        <li><a href="#">Portes ouvertes</a></li>
+                        <li><a href="#">La pastorale</a></li>
+                        <li><a href="#">Menus du restaurant scolaire</a></li>
+                    </ul>
+                <li><a href="#" id="cycles">Cycles</a></li>
+                    <ul id="menuCycles">
+                        <li><a href="#">Cycle 1</a></li>
+                        <li><a href="#">Cycle 2</a></li>
+                        <li><a href="#">Cycle 3</a></li>
+                    </ul>
+                <li><a href="#" id="assoc">Associations</a></li>
+                    <ul id="menuAssoc">
+                        <li><a href="#">APEL</a></li>
+                        <li><a href="#">OGEC</a></li>
+                    </ul>
+            </ul>
+        </nav>
     </header>
     <!-- slider -->
     <main class="container">
@@ -116,6 +135,7 @@
             </div>
         </footer>
         <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+        <script type="text/javascript" src="scripts/choix-menu.js"></script>
         <script src="scripts/jquery.nivo.slider.js"></script>
         <script type="text/javascript">
             // script slider
@@ -127,7 +147,7 @@
             });
             // script burger
             $("#menuPrincipal #burger i").click(function() {
-            $("#menuPrincipal ul").addClass("on").slideToggle(500)
+            $("#menuPrincipal #menu1").slideToggle(500)
             });
         </script>
     </main>
