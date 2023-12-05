@@ -28,6 +28,15 @@ html, body {
     src: url('fonts/poppins-v20-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
+  @font-face {
+    font-family: 'letters_for_learnersregular';
+    src: url('fonts/letters_for_learners-webfont.woff2') format('woff2'),
+         url('fonts/letters_for_learners-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
     font-family: 'Poppins';
     font-size: 14px;
@@ -88,6 +97,7 @@ header #banner #logoEcole {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'letters_for_learnersregular';
 }
 #burger {
     font-size: 2.2rem;
@@ -97,10 +107,12 @@ header #banner #logoEcole {
 
 #menuPrincipal ul {
     margin-bottom: 15px;
-    line-height: 30px;
+    line-height: 40px;
     display: none;
 }
-
+#menuPrincipal #menu1 {
+    font-size: 1.8rem;
+}
 #menuPrincipal ul li {
     transition: 0.3s;
 }
@@ -111,7 +123,7 @@ header #banner #logoEcole {
 #menuPrincipal #menuCycles,
 #menuPrincipal #menuAssoc {
     margin-left: 30px;
-    font-size: 0.8rem;
+    font-size: 1.6rem;
 }
 #menuPrincipal ul li:hover{
     -ms-transform: scale(1.2); /* IE 9 */
@@ -120,7 +132,7 @@ header #banner #logoEcole {
     transform: scale(1.2);
 }
 .on {
-    font-size: 1.1rem;
+    font-size: 1.9rem;
     border-bottom: solid 3px var(--jaune-moutarde);
 }
 
@@ -136,6 +148,8 @@ header #banner #logoEcole {
 }
 #accueil #texteAccueil h1 {
     margin-bottom: 20px;
+    font-family: 'letters_for_learnersregular';
+    font-size: 1.8rem;
 }
 #accueil #texteAccueil p {
     line-height: 30px;
@@ -162,6 +176,8 @@ header #banner #logoEcole {
     margin: 40px auto;
 }
 #agenda h2 {
+    font-family: 'letters_for_learnersregular';
+    font-size: 2.0rem;
     margin-bottom: 20px;
 }
 #agenda ul {
@@ -202,6 +218,8 @@ header #banner #logoEcole {
     width: 95%;
 }
 #news h2 {
+    font-family: 'letters_for_learnersregular';
+    font-size: 2.0rem;
     margin-bottom: 20px;
 }
 .nivo-caption {
@@ -223,6 +241,53 @@ header #banner #logoEcole {
 }
 #news #newsGrandEcran {
     display: none;
+}
+#news #newsGrandEcran img {
+    width: 97%;
+}
+#news #newsGrandEcran figure {
+    position: relative;
+    display: inline-block;
+}
+#news #newsGrandEcran figure:hover {
+    transition: 0.3s;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari et chrome */
+    -moz-transform:scale(1.1); /* Firefox */
+    transform: scale(1.1);
+}
+#news #newsGrandEcran figure #titreBelleIle,
+#news #newsGrandEcran figure #titreContes {
+    color: white;
+    font-size: 1.1rem;
+    width: 40%;
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+#news #newsGrandEcran figure #titreLipdub {
+    color: black;
+    font-size: 1.1rem;
+    width: 40%;
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+.mouseOn {
+    transition: 0.5s;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari et chrome */
+    -moz-transform:scale(1.1); /* Firefox */
+    transform: scale(1.1);
+}
+.mouseOff {
+    transition: 0.5s;
+    -ms-transform: scale(0.9); /* IE 9 */
+    -webkit-transform: scale(0.9); /* Safari et chrome */
+    -moz-transform:scale(0.9); /* Firefox */
+    transform: scale(0.9);
 }
 /*====================footer===================== */
 #pied #bas{
@@ -249,13 +314,16 @@ header #banner #logoEcole {
     font-style: normal;
 }
 #pied #bas #colonne2 {
-    display: flex;
-    flex-direction: column;
     margin-top: 15px;
     margin-right: 15px;
 }
-#pied #bas #colonne2 a {
+#pied #bas #colonne2 #blocLien {
+    display: flex;
+    flex-direction: column;
+}
+#pied #bas #colonne2 #blocLien a {
     color: white;
+    margin-bottom: 10px;
 }
 #pied #bas #colonne2 #logo-ec {
     margin-bottom: 30px;
@@ -317,6 +385,31 @@ header #banner #logoEcole {
     #agenda ul li {
         width: 30%;
     }
+
+    /* ===============footer============== */
+    #pied #bas {
+       justify-content: center;
+    }
+    #pied #bas #colonne1 {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-right: 15px;
+    }
+    #pied #bas #colonne2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 15px;
+    }
+    #pied #bas #colonne1 img {
+        padding-left: 50px;
+        width: 150px;
+    }
+    #pied #bas #colonne2 img {
+        padding-right: 50px;
+        width: 150px;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -333,8 +426,7 @@ header #banner #logoEcole {
     #accueil #texteAccueil {
         width: 40%;
     }
-}
-@media screen and (min-width: 1050px) {
+
      #news .slider-wrapper {
         display: none;
     }
@@ -342,9 +434,5 @@ header #banner #logoEcole {
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
-    }
-
-    #news #newsGrandEcran img {
-        width: 32%
     }
 }

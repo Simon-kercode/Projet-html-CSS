@@ -101,7 +101,7 @@
                     <img src="images/contes-orientaux-redim.jpg"  alt="contes-orientaux" data-transition="fade" title="#htmlcaption3"/>
                 </div>
                 <div id="htmlcaption1" class="nivo-html-caption">
-                    <a href="#"><h3>Séjour à belle Ile en mer Cycle 3</h3></a>
+                    <a href="#"><h3>Séjour à Belle Ile en Mer Cycle 3</h3></a>
                 </div>
                 <div id="htmlcaption2" class="nivo-html-caption">
                     <a href="#" style="color: black;"><h3>Lip'Dub de l'école</h3></a>
@@ -110,10 +110,26 @@
                     <a href="#"><h3>Contes orientaux Cycle 2</h3></a>
                 </div>
             </div>
+            <!-- partie news pour écrans plus larges -->
             <div id="newsGrandEcran">
-                <img src="images/belle-ile-redim.jpg"  alt="sejour-belle-ile" title="séjour Belle Ile"/>
-                <img src="images/lipdub-redim.jpg"  alt="lipdub" title="LipDub"/>
-                <img src="images/contes-orientaux-redim.jpg"  alt="contes-orientaux" title="contes orientaux"/>
+                <a href="#">
+                    <figure id="belleIle">
+                        <img src="images/belle-ile-redim.jpg"  alt="sejour-belle-ile" title="séjour Belle Ile"/>
+                        <figcaption id="titreBelleIle">Séjour à Belle Ile en Mer Cycle 3</figcaption>
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure id="lipdub"> 
+                        <img src="images/lipdub-redim.jpg"  alt="lipdub" title="LipDub"/>
+                        <figcaption id="titreLipdub">Lip'Dub de l'école</figcaption>
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure id="contes">    
+                        <img src="images/contes-orientaux-redim.jpg"  alt="contes-orientaux" title="contes orientaux"/>
+                        <figcaption id="titreContes">Contes orientaux Cycle 2</figcaption>
+                    </figure>
+                </a>   
             </div>
             <div id="boutonNews"><a href="#" id="allNews">Toute l'actualité de l'école</a></div>
         </section>
@@ -124,15 +140,17 @@
                     <img src="images/vignette-logo-grand-champ-removebg-preview.png" alt="grand-champ" id="logo-gc">
                     <address>
                         Ecole Sainte Marie<br>
-                        6Route de Penhoët<br>
+                        6 Route de Penhoët<br>
                         56390 Grand-Champ<br>
                         02 97 66 76 33
                     </address>
                 </div>
                 <div id="colonne2" class="colonne">
-                    <img src="images/logo-ec56.svg" alt="ecole-catholique" id="logo-ec">
-                    <a href="#">Contact</a>
-                    <a href="#">Mentions légales</a>
+                    <img src="images/logo-ec56.svg" alt="ecole-catholique" id="logo-ec">   
+                    <div id="blocLien">
+                        <a href="#">Contact</a>
+                        <a href="#">Mentions légales</a>
+                    </div>
                 </div>
             </aside>
             <div id="copyright">
@@ -141,6 +159,7 @@
         </footer>
         <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
         <script type="text/javascript" src="scripts/choix-menu.js"></script>
+        <script type="text/javascript" src="scripts/hover-news.js"></script>
         <script src="scripts/jquery.nivo.slider.js"></script>
         <script type="text/javascript">
             // script slider
