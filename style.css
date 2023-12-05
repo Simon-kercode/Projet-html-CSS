@@ -92,6 +92,7 @@ header #banner #logoEcole {
 #burger {
     font-size: 2.2rem;
     margin-top: -20px;
+    text-align: center;
 }
 
 #menuPrincipal ul {
@@ -125,6 +126,7 @@ header #banner #logoEcole {
 
 /* ================texte accueil=============== */
 #accueil {
+    width: 95%;
     display: flex;
     border: solid var(--jaune-moutarde) 3px;
     transition: 0.3s;
@@ -151,7 +153,6 @@ header #banner #logoEcole {
 }
 #accueil img {
     display: none;
-
 }
 
 /* ==================agenda de l'école============= */
@@ -220,6 +221,9 @@ header #banner #logoEcole {
     padding: 15px;
     border-radius: 50px;
 }
+#news #newsGrandEcran {
+    display: none;
+}
 /*====================footer===================== */
 #pied #bas{
     display: flex;
@@ -283,10 +287,64 @@ header #banner #logoEcole {
         margin-left: 15px;
     }
     #menuPrincipal {
-        flex-direction: row;
         position: relative;
-        bottom: 100px;
+        bottom: 105px;
     }
-}   #menuPrincipal ul {
+    #menuPrincipal #menu1 {
         display: flex;
+        flex-direction: row;
+        margin-left: 300px;
+    }
+    #menuPrincipal #menu1 ul {
+        position: absolute;
+        top: 50px;
+        right: 250px;
+    }
+    #menuPrincipal #menu1 ul li a {
+        color: black;
+    }
+    #menuPrincipal #menu1 li a {
+        color: white;
+        font-size: 1.2rem;
+        margin-right: 60px;
+    }    
+
+    /* ================agenda================= */
+    #agenda ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #agenda ul li {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    /* ===============accueil============== */
+    #accueil {
+        display: flex;
+        justify-content: space-between;
+    }
+    #accueil img {
+        display: block;
+        width: 55%;
+    }
+    
+    #accueil #texteAccueil {
+        width: 40%;
+    }
+}
+@media screen and (min-width: 1050px) {
+     #news .slider-wrapper {
+        display: none;
+    }
+    #news #newsGrandEcran {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    #news #newsGrandEcran img {
+        width: 32%
+    }
 }
