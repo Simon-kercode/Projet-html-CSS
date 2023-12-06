@@ -78,41 +78,38 @@ ul {
 }
 
 #banner {
-    height: 80px;
     background: url(images/fond-texture-bois-marron-blanc.jpg);
     background-size: 100% 75px;
     background-repeat: repeat-x;
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
-
 header #banner #logoEcole {
-   position: relative;
-   top: -10px;
-   width: 220px;
-   
+   margin-top: -10px;
+   padding-left: 60px;
+   padding-right: 30px;
+   width: 220px; 
 }
-#menuPrincipal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'letters_for_learnersregular';
-}
-#burger {
-    font-size: 2.2rem;
-    margin-top: -20px;
-    text-align: center;
+#menuPrincipal #burger {
+    font-size: 2.5rem;
+    padding-top: 10px;
 }
 
 #menuPrincipal ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'letters_for_learnersregular';
     margin-bottom: 15px;
     line-height: 40px;
     display: none;
 }
+
 #menuPrincipal #menu1 {
     font-size: 1.8rem;
 }
+
 #menuPrincipal ul li {
     transition: 0.3s;
 }
@@ -334,6 +331,133 @@ header #banner #logoEcole {
     font-size: 0.8rem;
     text-align: center;
 }
+
+/* ====================page contact================= */
+#titreContact {
+    font-family: 'letters_for_learnersregular';
+    font-size: 2rem;
+    margin-left: 15px;
+}
+.mainContact #texteContact {
+    width: 90%;
+    margin: 20px auto;
+    font-size: 1rem;
+}
+#formContact p {
+    width: 90%;
+    margin: 8px auto;
+}
+#formContact p input {
+    padding: 8px 16px;
+}
+#formContact p:nth-of-type(1) input{
+    margin-left: 8px;
+}
+#formContact p:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+}
+#formContact p:nth-of-type(2) input{
+    width: 46%;
+}
+
+#formContact p:nth-of-type(3) input,
+#formContact p:nth-of-type(4) input {
+    width: 96.5%;
+}
+#formContact textarea {
+    width: 100%;
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+    padding: 16px 16px;
+    box-sizing: border-box;
+}
+#formContact p input::placeholder,
+#formContact p textarea::placeholder {
+    color: black;
+    opacity: 1;
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+}
+#formContact p input,
+#formContact textarea {
+   border-color: var(--jaune-moutarde);
+   border-radius: 20px;
+}
+#formContact p input:focus {
+    outline:none
+}
+#formContact textarea:focus {
+    outline: none
+}
+#formContact a {
+    color: black;
+}
+#formContact a:hover {
+    text-decoration: underline;
+}
+#formContact .bouton {
+    border: none;
+    background-color: var(--bleu);
+    color: white;
+    font-family: 'Poppins';
+}
+#formContact p:nth-of-type(7) {
+    text-align: right;
+}
+#formContact #send {
+    background-color: grey;
+}
+
+/* ===================page news===================== */
+#titreNews {
+    font-family: 'letters_for_learnersregular';
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 10px 20px; 
+    justify-content: center;
+}
+.grid figure img {
+    width: 100%;
+}
+.grid figure {
+    position: relative;
+}
+.grid figure #titreBelleIle, 
+.grid figure #titreContes, 
+.grid figure #titreMusique, 
+.grid figure #titreRentree {
+    width: 50%;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+.grid figure #titreLipdub,
+.grid figure #titreTennis {
+    width: 50%;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+.grid figure:hover {
+    transition: 0.5s;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari et chrome */
+    -moz-transform:scale(1.1); /* Firefox */
+    transform: scale(1.1);
+}
 /* ===============responsive============= */
 @media screen and (min-width: 768px) {
     /* =================header============= */
@@ -347,36 +471,28 @@ header #banner #logoEcole {
         text-align: left;
         width: 25%;
     }
-
     #burger {
         display: none;
     }
     #banner #logoEcole {
         margin-left: 15px;
     }
-    #menuPrincipal {
-        position: relative;
-        bottom: 105px;
-    }
     #menuPrincipal #menu1 {
         display: flex;
         flex-direction: row;
-        margin-left: 300px;
+        padding: 20px 150px
     }
-    #menuPrincipal #menu1 ul {
-        position: absolute;
-        top: 50px;
-        right: 250px;
-    }
-    #menuPrincipal #menu1 ul li a {
-        color: black;
-    }
+   
     #menuPrincipal #menu1 li a {
         color: white;
-        font-size: 1.2rem;
         margin-right: 60px;
-    }    
-
+        font-size: 1.8rem;
+    } 
+    #menuPrincipal #menu1 ul li a {
+        color: black;
+        font-size: 1.6rem;
+    }
+       
     /* ================agenda================= */
     #agenda ul {
         flex-direction: row;

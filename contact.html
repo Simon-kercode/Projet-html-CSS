@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecole Sainte Marie</title>
+    <!-- stylesheet slider -->
+    <link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+    <!-- stylesheet burger -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container">
+        <div id="boutonsHaut">
+            <a id="inscriptionLink" href="#">Inscriptions</a>
+            <a id="contactLink" href="#">Contact</a>
+        </div>
+        <div id="banner">
+            <a href="index.html"><img id="logoEcole" src="images/logo-ecole.png" alt="Ecole Sainte Marie">
+                </a>     
+            <nav id="menuPrincipal">
+                <!-- menu burger -->
+                <div id="burger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <!-- menu de navigation -->
+                <ul id="menu1">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#" id="vie">Vie de l'école</a></li>
+                        <ul id="menuVie">
+                            <li><a href="#">Informations générales</a></li>
+                            <li><a href="#">Vacances scolaires</a></li>
+                            <li><a href="#">Notre école en photo</a></li>
+                            <li><a href="#">Filière bilingue (breton)</a></li>
+                            <li><a href="#">Portes ouvertes</a></li>
+                            <li><a href="#">La pastorale</a></li>
+                            <li><a href="#">Menus du restaurant scolaire</a></li>
+                        </ul>
+                    <li><a href="#" id="cycles">Cycles</a></li>
+                        <ul id="menuCycles">
+                            <li><a href="#">Cycle 1</a></li>
+                            <li><a href="#">Cycle 2</a></li>
+                            <li><a href="#">Cycle 3</a></li>
+                        </ul>
+                    <li><a href="#" id="assoc">Associations</a></li>
+                        <ul id="menuAssoc">
+                            <li><a href="#">APEL</a></li>
+                            <li><a href="#">OGEC</a></li>
+                        </ul>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+    <!-- slider -->
+    <main class="container mainContact">
+        <h2 id="titreContact" >Nous contacter</h2>
+        <p id="texteContact">Adressez nous votre demande à l'aide du formulaire ci dessous. 
+            L'équipe enseignante fera tout son possible pour vous répondre dans les meilleurs délais.
+        </p>
+        <form id="formContact" action="envoerForm.php" method="post">
+            <p>
+                Civilité :
+                <input type="radio" id="civM" name="civilité" value="M.">
+                <label for="civM">M.</label>
+                <input type="radio" id="civMme" name="civilité" value="Mme">
+                <label for="civMme">Mme</label>
+            </p>
+            <p>
+                <input type="text" name="nom" placeholder="Votre Nom *">
+                <input type="text" name="prenom" placeholder="Votre Prénom *">
+            </p>
+            <p>
+                <input type="email" name="email" placeholder="Votre E-mail *">
+            </p>
+            <p>
+                <input type="text" name="sujet" placeholder="Sujet *">
+            </p>
+            <p>
+                <textarea name="message" id="message" placeholder="Comment pouvons-nous vous aider ?" cols="30" rows="10">
+                </textarea>
+            </p>
+            <p>
+                <input type="checkbox" id="rgpd" name="rgpd" value="rgpd">
+                <label for="rgpd">J'autorise ce site à utiliser mes données personnelles
+                    selon notre <a href="#">politique de confidentialité</a>
+                </label>
+            </p>
+            <p> <input class="bouton" type="reset" value="Annuler">
+                <input id="send" class="bouton" id="boutonEnvoyer" type="submit" value="Envoyer">
+            </p>
+        </form>
+    </main>
+        <!-- footer -->
+        <footer id="pied" class="container">
+            <aside id="bas" class="container">
+                <div id="colonne1" class="colonne">   
+                    <img src="images/vignette-logo-grand-champ-removebg-preview.png" alt="grand-champ" id="logo-gc">
+                    <address>
+                        Ecole Sainte Marie<br>
+                        6 Route de Penhoët<br>
+                        56390 Grand-Champ<br>
+                        02 97 66 76 33
+                    </address>
+                </div>
+                <div id="colonne2" class="colonne">
+                    <img src="images/logo-ec56.svg" alt="ecole-catholique" id="logo-ec">   
+                    <div id="blocLien">
+                        <a href="#">Contact</a>
+                        <a href="#">Mentions légales</a>
+                    </div>
+                </div>
+            </aside>
+            <div id="copyright">
+                <p>Copyright &copy; 2023 Greta Bretagne Sud - Projet d'étude</p>
+            </div>
+        </footer>
+        <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+        <script type="text/javascript" src="scripts/choix-menu.js"></script>
+        <script type="text/javascript" src="scripts/hover-news.js"></script>
+        <script src="scripts/jquery.nivo.slider.js"></script>
+        <script type="text/javascript">
+            // script slider
+            $(window).load(function() {
+            $('#slider-accueil').nivoSlider();
+            });
+            $(window).load(function() {
+            $('#slider-news').nivoSlider();
+            });
+            // script burger
+            $("#menuPrincipal #burger i").click(function() {
+            $("#menuPrincipal #menu1").slideToggle(500)
+            });
+             // script déverouillage du bouton send si case rgpd cochée
+            $(document).ready(function () {
+            // Désactiver le bouton au chargement de la page
+                $('#send').prop('disabled', true);
+
+            // Lorsque la case RGPD est cochée/décochée
+                $('#rgpd').change(function () {
+                // Vérifie si la case RGPD est cochée
+                    if ($(this).prop('checked')) {
+                    // Active le bouton et défini la couleur de fond
+                    $('#send').prop('disabled', false).css('background-color', '#4c7aed');
+                    } else {
+                    // Désactive le bouton
+                    $('#send').prop('disabled', true).css ('background-color', '#808080');
+                    }
+                });
+            });
+        </script>
+</body>
+</html>
