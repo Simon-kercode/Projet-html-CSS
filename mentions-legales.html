@@ -53,43 +53,12 @@
             </nav>
         </div> 
     </header>
-    <main class="container mainContact">
-        <h2 id="titreContact" >Nous contacter</h2>
-        <p id="texteContact">Adressez nous votre demande à l'aide du formulaire ci dessous. 
-            L'équipe enseignante fera tout son possible pour vous répondre dans les meilleurs délais.
+    <main class="mainML container">
+        <h2 id="titreML" >Mentions légales</h2>
+        <p>Ce site Web a été édité par M. Simon MALRY et fait parti d'un projet d'étude dans le cadre 
+            de la formation continue de Développeur Web Full Stack proposé par l'organisme Greta Bretagne Sud à Vannes.
+            Ce site Web ne pourra ni être publié, ni être utilisé à des fins commerciales.
         </p>
-        <form id="formContact" action="envoerForm.php" method="post">
-            <p>
-                Civilité :
-                <input type="radio" id="civM" name="civilité" value="M.">
-                <label for="civM">M.</label>
-                <input type="radio" id="civMme" name="civilité" value="Mme">
-                <label for="civMme">Mme</label>
-            </p>
-            <p>
-                <input type="text" name="nom" placeholder="Votre Nom *">
-                <input type="text" name="prenom" placeholder="Votre Prénom *">
-            </p>
-            <p>
-                <input type="email" name="email" placeholder="Votre E-mail *">
-            </p>
-            <p>
-                <input type="text" name="sujet" placeholder="Sujet *">
-            </p>
-            <p>
-                <textarea name="message" id="message" placeholder="Comment pouvons-nous vous aider ?" cols="30" rows="10">
-                </textarea>
-            </p>
-            <p>
-                <input type="checkbox" id="rgpd" name="rgpd" value="rgpd">
-                <label for="rgpd">J'autorise ce site à utiliser mes données personnelles
-                    selon notre <a href="#">politique de confidentialité</a>
-                </label>
-            </p>
-            <p> <input class="bouton" type="reset" value="Annuler">
-                <input id="send" class="bouton" id="boutonEnvoyer" type="submit" value="Envoyer">
-            </p>
-        </form>
     </main>
         <!-- footer -->
         <footer id="pied" class="container">
@@ -108,7 +77,7 @@
                 <div id="colonne2" class="colonne">
                     <a href="https://www.ec56.org/">
                         <img src="images/logo-ec56.svg" alt="ecole-catholique" id="logo-ec">   
-                    </a>  
+                    </a>   
                     <div id="blocLien">
                         <a href="contact.html">Contact</a>
                         <a href="mentions-legales.html">Mentions légales</a>
@@ -122,7 +91,6 @@
         <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
         <script type="text/javascript" src="scripts/choix-menu.js"></script>
         <script type="text/javascript" src="scripts/hover-news.js"></script>
-        <script type="text/javascript" src="scripts/rgpd.js"></script>
         <script src="scripts/jquery.nivo.slider.js"></script>
         <script type="text/javascript">
             // script slider

@@ -38,9 +38,17 @@ $("#menuPrincipal #menu1 #assoc").click(function() {
 $(document).click(function(event) {
     // Vérifier si l'élément cliqué est en dehors des menus
     if (!$(event.target).closest("#menuPrincipal").length) {
+        // Vérifier la largeur de l'écran
+        if (($(window).width()) < 768) {
         // Retirer la classe "on" de tous les éléments
         $("#menuPrincipal #menu1 .on").removeClass("on");
         // Masquer tous les menus
         $("#menuPrincipal #menu1, #menuPrincipal #menuVie, #menuPrincipal #menuCycles, #menuPrincipal #menuAssoc").slideUp(500);
     }
-});
+        else {
+        $("#menuPrincipal #menu1 .on").removeClass("on");
+        // Masquer tous les menus
+        $("#menuPrincipal #menuVie, #menuPrincipal #menuCycles, #menuPrincipal #menuAssoc").slideUp(500);
+    }}}
+    
+);
