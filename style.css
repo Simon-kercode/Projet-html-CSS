@@ -42,9 +42,6 @@ body {
     font-size: 14px;
     background: url(images/fond-op.jpg) repeat;
     background-size: 70%;
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
 }
 
 .container {
@@ -70,7 +67,14 @@ ul {
     font-family: 'Poppins';
     color: black;
 }
-
+#accueilLink {
+    color: white;
+    background: #0b0b0b;
+    width: 20%;
+    padding: 8px 15px;
+    font-family: 'Poppins';
+    display: none;
+}
 #inscriptionLink {
     background-color: var(--jaune-moutarde);
     
@@ -86,20 +90,23 @@ ul {
     background-size: 100% 75px;
     background-repeat: repeat-x;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 20px;
 }
-header #banner #logoEcole {
+#banner #logoEcole {
    margin-top: -10px;
-   padding-left: 60px;
-   padding-right: 30px;
    width: 220px; 
 }
 #menuPrincipal #burger {
     font-size: 2.5rem;
-    padding-top: 10px;
 }
-
+#menuPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
 #menuPrincipal ul {
     display: flex;
     flex-direction: column;
@@ -110,30 +117,46 @@ header #banner #logoEcole {
     display: none;
 }
 
-#menuPrincipal #menu1 {
-    font-size: 1.8rem;
+#menuPrincipal #menuMobile {
+    font-size: 2rem;
+    width: 80%;
+    position: absolute;
+    top: 50px;
+    right: 45px;
+    z-index: 9999;
+    background-color: white;
 }
-
+#menuPrincipal #menuMobile .colonneMenu {
+    display: flex;
+    flex-direction: column;
+}
 #menuPrincipal ul li {
     transition: 0.3s;
 }
 #menuPrincipal ul li a {
     color: black;
 }
-#menuPrincipal #menuVie,
-#menuPrincipal #menuCycles,
-#menuPrincipal #menuAssoc {
-    margin-left: 30px;
+#menuPrincipal #menuDesktop {
+    font-size: 2rem;
+    display: none;
+}
+#menuPrincipal #menuDesktop .sousMenu {
+    position: absolute;
+    z-index: 9999;
+    background-color: white;
+}
+#menuPrincipal .sousMenu{
     font-size: 1.6rem;
+    padding: 0 30px;
 }
-#menuPrincipal ul li:hover{
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari et chrome */
-    -moz-transform:scale(1.2); /* Firefox */
+/*#menuPrincipal ul li:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform:scale(1.2);
     transform: scale(1.2);
-}
+} */
 .on {
-    font-size: 1.9rem;
+    font-size: 2.3rem;
     border-bottom: solid 3px var(--jaune-moutarde);
 }
 
@@ -142,7 +165,6 @@ header #banner #logoEcole {
     width: 95%;
     display: flex;
     border: solid var(--jaune-moutarde) 3px;
-    transition: 0.3s;
     padding: 20px 15px;
     box-sizing: border-box;
     background-color: rgba(255, 255 ,255, 0.3) ;
@@ -477,14 +499,18 @@ header #banner #logoEcole {
 @media screen and (min-width: 768px) {
     /* =================header============= */
     #banner {
-        justify-content: flex-start;
+        flex-direction: row;
+        align-items: flex-start;
     }
     #boutonsHaut {
         justify-content: flex-end;
     }
+    #accueilLink {
+        display: block;
+    }
     #inscriptionLink, #contactLink {
         text-align: left;
-        width: 25%;
+        width: 20%;
     }
     #burger {
         display: none;
@@ -492,18 +518,25 @@ header #banner #logoEcole {
     #banner #logoEcole {
         margin-left: 15px;
     }
-    #menuPrincipal #menu1 {
+    #menuMobile {
+        display: none;
+    }
+    #menuPrincipal #menuDesktop #menuAccueil {
+        display: none;
+    }
+    #menuPrincipal #menuDesktop {
         display: flex;
         flex-direction: row;
-        padding: 20px 150px
+        padding-top: 20px;
     }
-   
-    #menuPrincipal #menu1 li a {
+    #menuPrincipal #menuDesktop li {
+        margin-right: 80px
+    }
+    #menuPrincipal #menuDesktop li a {
         color: white;
-        margin-right: 60px;
-        font-size: 1.8rem;
+        font-size: 2.0rem;
     } 
-    #menuPrincipal #menu1 ul li a {
+    #menuPrincipal #menuDesktop ul li a {
         color: black;
         font-size: 1.6rem;
     }

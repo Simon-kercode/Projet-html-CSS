@@ -1,5 +1,5 @@
 // clic vie de l'école
-$("#menuPrincipal #menu1 #vie").click(function() {
+$("#menuPrincipal #vie").click(function() {
     // Vérifier si l'élément a la classe "on"
     if ($(this).hasClass("on")) {
         // Retirer la classe "on"
@@ -13,7 +13,7 @@ $("#menuPrincipal #menu1 #vie").click(function() {
 });
 
 // clic cycles
-$("#menuPrincipal #menu1 #cycles").click(function() {
+$("#menuPrincipal #cycles").click(function() {
     if ($(this).hasClass("on")) {
         $(this).removeClass("on");
         $("#menuPrincipal #menuCycles").slideUp(500);
@@ -24,7 +24,7 @@ $("#menuPrincipal #menu1 #cycles").click(function() {
 });
 
 // clic Associations
-$("#menuPrincipal #menu1 #assoc").click(function() {
+$("#menuPrincipal #assoc").click(function() {
     if ($(this).hasClass("on")) {
         $(this).removeClass("on");
         $("#menuPrincipal #menuAssoc").slideUp(500);
@@ -41,12 +41,12 @@ $(document).click(function(event) {
         // Vérifier la largeur de l'écran
         if (($(window).width()) < 768) {
         // Retirer la classe "on" de tous les éléments
-        $("#menuPrincipal #menu1 .on").removeClass("on");
+        $("#menuPrincipal #menuMobile .on").removeClass("on");
         // Masquer tous les menus
-        $("#menuPrincipal #menu1, #menuPrincipal #menuVie, #menuPrincipal #menuCycles, #menuPrincipal #menuAssoc").slideUp(500);
+        $("#menuPrincipal #menuMobile, #menuPrincipal #menuVie, #menuPrincipal #menuCycles, #menuPrincipal #menuAssoc").slideUp(500);
     }
         else {
-        $("#menuPrincipal #menu1 .on").removeClass("on");
+        $("#menuPrincipal #menuDesktop .on").removeClass("on");
         // Masquer tous les menus
         $("#menuPrincipal #menuVie, #menuPrincipal #menuCycles, #menuPrincipal #menuAssoc").slideUp(500);
     }}}
