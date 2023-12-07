@@ -118,17 +118,29 @@ ul {
 }
 
 #menuPrincipal #menuMobile {
-    font-size: 2rem;
+    font-size: 1.6rem;
     width: 80%;
     position: absolute;
     top: 50px;
     right: 45px;
     z-index: 9999;
+    background-color: rgb(221, 221, 221);
+}
+#menuPrincipal #menuMobile .surMenu  {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    line-height: 50px;
+}
+#menuPrincipal #menuMobile .sousMenu {
+    font-size: 1.5rem;
     background-color: white;
 }
-#menuPrincipal #menuMobile .colonneMenu {
-    display: flex;
-    flex-direction: column;
+#menuPrincipal #menuMobile .sousMenu li {
+    width: 100%;
+}
+#menuPrincipal #menuMobile .sousMenu li:hover {
+    background-color: rgb(221, 221, 221);;
 }
 #menuPrincipal ul li {
     transition: 0.3s;
@@ -138,16 +150,26 @@ ul {
 }
 #menuPrincipal #menuDesktop {
     font-size: 2rem;
+    width: 100%;
     display: none;
 }
 #menuPrincipal #menuDesktop .sousMenu {
     position: absolute;
     z-index: 9999;
-    background-color: white;
+    width:30%;
+    background-color: wheat;
+    border-radius: 20px;
 }
+#menuPrincipal #menuDesktop .sousMenu li {
+    padding-left: 15px;
+    
+}
+#menuPrincipal #menuDesktop .sousMenu li a:hover {
+    color: var(--jaune-moutarde);
+} 
 #menuPrincipal .sousMenu{
     font-size: 1.6rem;
-    padding: 0 30px;
+    padding-left: 30px;
 }
 /*#menuPrincipal ul li:hover{
     -ms-transform: scale(1.2);
@@ -156,8 +178,8 @@ ul {
     transform: scale(1.2);
 } */
 .on {
-    font-size: 2.3rem;
-    border-bottom: solid 3px var(--jaune-moutarde);
+    
+    color: var(--jaune-moutarde);
 }
 
 /* ================texte accueil=============== */
@@ -529,8 +551,8 @@ ul {
         flex-direction: row;
         padding-top: 20px;
     }
-    #menuPrincipal #menuDesktop li {
-        margin-right: 80px
+    #menuPrincipal #menuDesktop .surMenu {
+        margin-right: 80px;
     }
     #menuPrincipal #menuDesktop li a {
         color: white;

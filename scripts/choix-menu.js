@@ -7,6 +7,7 @@ $("#menuPrincipal #vie").click(function() {
         $("#menuPrincipal #menuVie").slideUp(500);
     } else {
         // Ajouter la classe "on" et afficher le menu
+        $('#menuPrincipal #menuCycles, #menuPrincipal #menuAssoc').slideUp(500);
         $(this).addClass("on");
         $("#menuPrincipal #menuVie").slideToggle(500);
     }
@@ -18,6 +19,7 @@ $("#menuPrincipal #cycles").click(function() {
         $(this).removeClass("on");
         $("#menuPrincipal #menuCycles").slideUp(500);
     } else {
+        $('#menuPrincipal #menuVie, #menuPrincipal #menuAssoc').slideUp(500);
         $(this).addClass("on");
         $("#menuPrincipal #menuCycles").slideToggle(500);
     }
@@ -29,6 +31,7 @@ $("#menuPrincipal #assoc").click(function() {
         $(this).removeClass("on");
         $("#menuPrincipal #menuAssoc").slideUp(500);
     } else {
+        $('#menuPrincipal #menuCycles, #menuPrincipal #menuVie').slideUp(500);
         $(this).addClass("on");
         $("#menuPrincipal #menuAssoc").slideToggle(500);
     }
