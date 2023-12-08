@@ -14,41 +14,75 @@
 <body>
     <header class="container">
         <div id="boutonsHaut">
+            <a id="accueilLink" href="index.html">Accueil</a>
             <a id="inscriptionLink" href="#">Inscriptions</a>
             <a id="contactLink" href="contact.html">Contact</a>
         </div>
         <div id="banner">
             <a href="index.html"><img id="logoEcole" src="images/logo-ecole.png" alt="Ecole Sainte Marie">
                 </a>     
-            <nav id="menuPrincipal">
+            <nav id="menuPrincipal" class="container">
                 <!-- menu burger -->
                 <div id="burger">
                     <i class="fa-solid fa-bars"></i>
                 </div>
-                <!-- menu de navigation -->
-                <ul id="menu1">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="#" id="vie">Vie de l'école</a></li>
-                        <ul id="menuVie">
+                <!-- menu de navigation mobile-->
+                <ul id="menuMobile">
+                    <li id="menuAccueil" class="surMenu"><a href="index.html">Accueil</a></li>
+                    <div class="colonneMenu">
+                    <li><a href="#" id="vie" class="surMenu">Vie&nbsp;de&nbsp;l'école <img src="images/angle-down-black.svg" alt=""></a></li>
+                        <ul id="menuVie" class="sousMenu">
                             <li><a href="#">Informations générales</a></li>
-                            <li><a href="#">Vacances scolaires</a></li>
                             <li><a href="#">Notre école en photo</a></li>
                             <li><a href="#">Filière bilingue (breton)</a></li>
-                            <li><a href="#">Portes ouvertes</a></li>
                             <li><a href="#">La pastorale</a></li>
-                            <li><a href="#">Menus du restaurant scolaire</a></li>
                         </ul>
-                    <li><a href="#" id="cycles">Cycles</a></li>
-                        <ul id="menuCycles">
+                    </div>
+                    <div class="colonneMenu">   
+                    <li><a href="#" id="cycles" class="surMenu">Cycles <img src="images/angle-down-black.svg" alt=""></a></li>
+                        <ul id="menuCycles" class="sousMenu">
                             <li><a href="#">Cycle 1</a></li>
                             <li><a href="#">Cycle 2</a></li>
                             <li><a href="#">Cycle 3</a></li>
                         </ul>
-                    <li><a href="#" id="assoc">Associations</a></li>
-                        <ul id="menuAssoc">
+                    </div>
+                    <div class="colonneMenu"> 
+                    <li><a href="#" id="assoc" class="surMenu">Associations <img src="images/angle-down-black.svg" alt=""></a></li>
+                        <ul id="menuAssoc" class="sousMenu">
                             <li><a href="#">APEL</a></li>
                             <li><a href="#">OGEC</a></li>
                         </ul>
+                    </div>  
+                    <li><a href="news.html" id="actus" class="surMenu">Actualités</a></li>    
+                </ul>
+                <!-- menu de navigation desktop -->
+                <ul id="menuDesktop">
+                    <li id="menuAccueil"><a href="index.html">Accueil</a></li>
+                    <div class="colonneMenu">
+                    <li><a href="#" id="vie" class="surMenu">Vie&nbsp;de&nbsp;l'école <img src="images/angle-down-white.svg" alt=""></a></li>
+                        <ul id="menuVie" class="sousMenu">
+                            <li><a href="#">Informations générales</a></li>
+                            <li><a href="#">Notre école en photo</a></li>
+                            <li><a href="#">Filière bilingue (breton)</a></li>
+                            <li><a href="#">La pastorale</a></li>
+                        </ul>
+                    </div>
+                    <div class="colonneMenu">   
+                    <li><a href="#" id="cycles" class="surMenu">Cycles <img src="images/angle-down-white.svg" alt=""></a></li>
+                        <ul id="menuCycles" class="sousMenu">
+                            <li><a href="#">Cycle 1</a></li>
+                            <li><a href="#">Cycle 2</a></li>
+                            <li><a href="#">Cycle 3</a></li>
+                        </ul>
+                    </div>
+                    <div class="colonneMenu"> 
+                    <li><a href="#" id="assoc" class="surMenu">Associations <img src="images/angle-down-white.svg" alt=""></a></li>
+                        <ul id="menuAssoc" class="sousMenu">
+                            <li><a href="#">APEL</a></li>
+                            <li><a href="#">OGEC</a></li>
+                        </ul>
+                    </div>
+                    <li><a href="news.html" id="actus" class="surMenu">Actualités</a></li>     
                 </ul>
             </nav>
         </div> 
@@ -134,7 +168,7 @@
             });
             // script burger
             $("#menuPrincipal #burger i").click(function() {
-            $("#menuPrincipal #menu1").slideToggle(500)
+            $("#menuPrincipal #menuMobile").slideToggle(500)
             });
         </script>
 </body>
