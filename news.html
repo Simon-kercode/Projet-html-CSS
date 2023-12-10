@@ -15,7 +15,7 @@
     <header class="container">
         <div id="boutonsHaut">
             <a id="accueilLink" href="index.html">Accueil</a>
-            <a id="inscriptionLink" href="#">Inscriptions</a>
+            <a id="inscriptionLink" href="inscriptions.html">Inscriptions</a>
             <a id="contactLink" href="contact.html">Contact</a>
         </div>
         <div id="banner">
@@ -32,54 +32,53 @@
                     <div class="colonneMenu">
                     <li><a href="#" id="vie" class="surMenu">Vie&nbsp;de&nbsp;l'école <img src="images/angle-down-black.svg" alt=""></a></li>
                         <ul id="menuVie" class="sousMenu">
-                            <li><a href="#">Informations générales</a></li>
-                            <li><a href="#">Notre école en photo</a></li>
-                            <li><a href="#">Filière bilingue (breton)</a></li>
-                            <li><a href="#">La pastorale</a></li>
+                            <li><a href="infos.html">Informations générales</a></li>
+                            <li><a href="photos.html">Notre école en photo</a></li>
+                            <li><a href="breton.html">Filière bilingue (breton)</a></li>
+                            <li><a href="pastorale.html">La pastorale</a></li>
                         </ul>
                     </div>
                     <div class="colonneMenu">   
                     <li><a href="#" id="cycles" class="surMenu">Cycles <img src="images/angle-down-black.svg" alt=""></a></li>
                         <ul id="menuCycles" class="sousMenu">
-                            <li><a href="#">Cycle 1</a></li>
-                            <li><a href="#">Cycle 2</a></li>
-                            <li><a href="#">Cycle 3</a></li>
+                            <li><a href="cycle1.html">Cycle 1</a></li>
+                            <li><a href="cycle2.html">Cycle 2</a></li>
+                            <li><a href="cycle3.html">Cycle 3</a></li>
                         </ul>
                     </div>
                     <div class="colonneMenu"> 
                     <li><a href="#" id="assoc" class="surMenu">Associations <img src="images/angle-down-black.svg" alt=""></a></li>
                         <ul id="menuAssoc" class="sousMenu">
-                            <li><a href="#">APEL</a></li>
-                            <li><a href="#">OGEC</a></li>
+                            <li><a href="apel.html">APEL</a></li>
+                            <li><a href="ogec.html">OGEC</a></li>
                         </ul>
                     </div>  
                     <li><a href="news.html" id="actus" class="surMenu">Actualités</a></li>    
                 </ul>
                 <!-- menu de navigation desktop -->
                 <ul id="menuDesktop">
-                    <li id="menuAccueil"><a href="index.html">Accueil</a></li>
                     <div class="colonneMenu">
                     <li><a href="#" id="vie" class="surMenu">Vie&nbsp;de&nbsp;l'école <img src="images/angle-down-white.svg" alt=""></a></li>
                         <ul id="menuVie" class="sousMenu">
-                            <li><a href="#">Informations générales</a></li>
-                            <li><a href="#">Notre école en photo</a></li>
-                            <li><a href="#">Filière bilingue (breton)</a></li>
-                            <li><a href="#">La pastorale</a></li>
+                            <li><a href="infos.html">Informations générales</a></li>
+                            <li><a href="photos.html">Notre école en photo</a></li>
+                            <li><a href="breton.html">Filière bilingue (breton)</a></li>
+                            <li><a href="pastorale.html">La pastorale</a></li>
                         </ul>
                     </div>
                     <div class="colonneMenu">   
                     <li><a href="#" id="cycles" class="surMenu">Cycles <img src="images/angle-down-white.svg" alt=""></a></li>
                         <ul id="menuCycles" class="sousMenu">
-                            <li><a href="#">Cycle 1</a></li>
-                            <li><a href="#">Cycle 2</a></li>
-                            <li><a href="#">Cycle 3</a></li>
+                            <li><a href="cycle1.html">Cycle 1</a></li>
+                            <li><a href="cycle2.html">Cycle 2</a></li>
+                            <li><a href="cycle3.html">Cycle 3</a></li>
                         </ul>
                     </div>
                     <div class="colonneMenu"> 
                     <li><a href="#" id="assoc" class="surMenu">Associations <img src="images/angle-down-white.svg" alt=""></a></li>
                         <ul id="menuAssoc" class="sousMenu">
-                            <li><a href="#">APEL</a></li>
-                            <li><a href="#">OGEC</a></li>
+                            <li><a href="apel.html">APEL</a></li>
+                            <li><a href="ogec.html">OGEC</a></li>
                         </ul>
                     </div>
                     <li><a href="news.html" id="actus" class="surMenu">Actualités</a></li>     
@@ -88,60 +87,73 @@
         </div> 
     </header>
     <main class="mainNews container">
-        <h2 id="titreNews">Actualités de l'école</h2>
+        <!-- Boutons filtres news -->
+        <header id="newsHeader">
+            <h2 id="titreNews">Actualités de l'école</h2>
+                <p>Retrouvez ici toute l'actualité de l'école. Vous avez la possibilité de trier par cycles en utilisant les boutons ci-dessous.</p>
+                <nav id="menuNews">
+                    <ul>
+                        <li><a href="#" id="tout">Tout</a></li>
+                        <li><a href="#" id="cycleUn">Cycle 1</a></li>
+                        <li><a href="#" id="cycleDeux">Cycle 2</a></li>
+                        <li><a href="#" id="cycleTrois">Cycle 3</a></li>
+                    </ul>
+                </nav>
+        </header>
+        <!-- liste des news -->
         <div class="grid container">
             <a href="#">
-                <figure id="belleIle">
+                <figure class="tout cycleTrois">
                     <img src="images/belle-ile-redim.jpg"  alt="sejour-belle-ile" title="séjour Belle Ile"/>
                     <figcaption class="titreBlanc">Séjour à Belle Ile en Mer Cycle 3</figcaption>
                 </figure>
             </a>
             <a href="#">
-                <figure id="lipdub"> 
-                    <img src="images/lipdub-redim.jpg"  alt="lipdub" title="LipDub"/>
-                    <figcaption class="titreNoir">Lip'Dub de l'école</figcaption>
-                </figure>
-            </a>
-            <a href="#">
-                <figure id="contes">    
-                    <img src="images/contes-orientaux-redim.jpg"  alt="contes-orientaux" title="contes orientaux"/>
-                    <figcaption class="titreBlanc">Contes orientaux Cycle 2</figcaption>
-                </figure>
-            </a>
-            <a href="#">
-                <figure id="musique">    
-                    <img src="images/musique-du-monde-redim.jpg"  alt="musiques du monde" title="musiques du mone"/>
-                    <figcaption class="titreBlanc">Musiques du monde Cycle 1</figcaption>
-                </figure>
-            </a>
-            <a href="#">
-                <figure id="tennis">    
-                    <img src="images/tennis-redim.jpg"  alt="tennis" title="tennis"/>
-                    <figcaption class="titreNoir">Initiation au tennis Cycle 1</figcaption>
-                </figure>
-            </a>
-            <a href="#">
-                <figure id="rentree">    
-                    <img src="images/celeb-rentree-redim.jpg"  alt="rentree" title="celebration rentree"/>
-                    <figcaption class="titreBlanc">Célébration de rentrée</figcaption>
-                </figure>
-            </a>
-            <a href="#">
-                <figure id="rencontre">    
-                    <img src="images/rencontre-auteur.PNG"  alt="rencontre-auteur" title="rencontre avec auteur"/>
-                    <figcaption class="titreBlanc">Rencontre avec un auteur Cycle 2</figcaption>
-                </figure>
-            </a>
-            <a href="#">
-                <figure id="rentree">    
+                <figure class="tout cycleTrois">    
                     <img src="images/escape-game.PNG"  alt="escape-game" title="escape game"/>
                     <figcaption class="titreNoir">Escape Game Cycle 3</figcaption>
                 </figure>
             </a>
             <a href="#">
-                <figure id="rentree">    
+                <figure class="tout cycleTrois">    
                     <img src="images/conseil-municipal-jeunes.PNG"  alt="conseil-municipal" title="conseil municipal jeunes"/>
                     <figcaption class="titreBlanc">Conseil municipal des jeunes Cycle 3</figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure class="tout cycleDeux">    
+                    <img src="images/contes-orientaux-redim.jpg"  alt="contes-orientaux" title="contes orientaux"/>
+                    <figcaption class="titreBlanc">Contes orientaux Cycle 2</figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure class="tout cycleDeux">    
+                    <img src="images/rencontre-auteur.PNG"  alt="rencontre-auteur" title="rencontre avec auteur"/>
+                    <figcaption class="titreBlanc">Rencontre avec un auteur Cycle 2</figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure class="tout"> 
+                    <img src="images/lipdub-redim.jpg"  alt="lipdub" title="LipDub"/>
+                    <figcaption class="titreNoir">Lip'Dub de l'école</figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure class="tout cycleUn">    
+                    <img src="images/musique-du-monde-redim.jpg"  alt="musiques du monde" title="musiques du mone"/>
+                    <figcaption class="titreBlanc">Musiques du monde Cycle 1</figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure class="tout cycleUn">    
+                    <img src="images/tennis-redim.jpg"  alt="tennis" title="tennis"/>
+                    <figcaption class="titreNoir">Initiation au tennis Cycle 1</figcaption>
+                </figure>
+            </a>
+            <a href="#">
+                <figure class="tout">    
+                    <img src="images/celeb-rentree-redim.jpg"  alt="rentree" title="celebration rentree"/>
+                    <figcaption class="titreBlanc">Célébration de rentrée</figcaption>
                 </figure>
             </a>
         </div>
@@ -176,7 +188,7 @@
         </footer>
         <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
         <script type="text/javascript" src="scripts/choix-menu.js"></script>
-        <script type="text/javascript" src="scripts/hover-news.js"></script>
+        <script type="text/javascript" src="scripts/scripts-news.js"></script>
         <script src="scripts/jquery.nivo.slider.js"></script>
         <script type="text/javascript">
             // script slider

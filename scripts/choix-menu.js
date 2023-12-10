@@ -1,56 +1,58 @@
 // clic vie de l'école
 $("#menuPrincipal #vie").click(function() {
-    // Vérifier si l'élément a la classe "on"
-    if ($(this).hasClass("on")) {
-        // Retirer la classe "on"
-        $(this).removeClass("on");
+    // Vérifie si l'élément a la classe "navOn"
+    if ($(this).hasClass("navOn")) {
+        // Retire la classe "navOn" et ferme ce menu
+        $(this).removeClass("navOn");
         $("#menuPrincipal #menuVie").slideUp(500);
     } else {
-        // Ajouter la classe "on" et afficher le menu
+        // retire la classe "navOn" des autres menus et les ferme
+        $('#menuPrincipal #cycles, #menuPrincipal #assoc').removeClass("navOn");
         $('#menuPrincipal #menuCycles, #menuPrincipal #menuAssoc').slideUp(500);
-        $(this).addClass("on");
+        // Ajoute la classe "navOn" et affiche ce menu
+        $(this).addClass("navOn");
         $("#menuPrincipal #menuVie").slideToggle(500);
     }
 });
 
 // clic cycles
 $("#menuPrincipal #cycles").click(function() {
-    if ($(this).hasClass("on")) {
-        $(this).removeClass("on");
+    if ($(this).hasClass("navOn")) {
+        $(this).removeClass("navOn");
         $("#menuPrincipal #menuCycles").slideUp(500);
     } else {
+        $('#menuPrincipal #vie, #menuPrincipal #assoc').removeClass("navOn");
         $('#menuPrincipal #menuVie, #menuPrincipal #menuAssoc').slideUp(500);
-        $(this).addClass("on");
+        $(this).addClass("navOn");
         $("#menuPrincipal #menuCycles").slideToggle(500);
     }
 });
 
 // clic Associations
 $("#menuPrincipal #assoc").click(function() {
-    if ($(this).hasClass("on")) {
-        $(this).removeClass("on");
+    if ($(this).hasClass("navOn")) {
+        $(this).removeClass("navOn");
         $("#menuPrincipal #menuAssoc").slideUp(500);
     } else {
+        $('#menuPrincipal #vie, #menuPrincipal #cycles').removeClass("navOn");
         $('#menuPrincipal #menuCycles, #menuPrincipal #menuVie').slideUp(500);
-        $(this).addClass("on");
+        $(this).addClass("navOn");
         $("#menuPrincipal #menuAssoc").slideToggle(500);
     }
 });
 
-// Gérer le clic en dehors du menu pour retirer la classe "on"
+// Gère le clic en dehors du menu pour retirer la classe "navOn"
 $(document).click(function(event) {
-    // Vérifier si l'élément cliqué est en dehors des menus
+    // Vérifie si l'élément cliqué est en dehors des menus
     if (!$(event.target).closest("#menuPrincipal").length) {
-        // Vérifier la largeur de l'écran
+        // Vérifie la largeur de l'écran
         if (($(window).width()) < 768) {
-        // Retirer la classe "on" de tous les éléments
-        $("#menuPrincipal #menuMobile .on").removeClass("on");
-        // Masquer tous les menus
+        // Retire la classe "navOn" de tous les éléments et masque tous les menus
+        $("#menuPrincipal #menuMobile .navOn").removeClass("navOn");
         $("#menuPrincipal #menuMobile, #menuPrincipal #menuVie, #menuPrincipal #menuCycles, #menuPrincipal #menuAssoc").slideUp(500);
     }
         else {
-        $("#menuPrincipal #menuDesktop .on").removeClass("on");
-        // Masquer tous les menus
+        $("#menuPrincipal #menuDesktop .navOn").removeClass("navOn");
         $("#menuPrincipal #menuVie, #menuPrincipal #menuCycles, #menuPrincipal #menuAssoc").slideUp(500);
     }}}
     

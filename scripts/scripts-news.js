@@ -34,3 +34,30 @@ $("#news #newsGrandEcran #contes").hover(
     }
 );
 
+$(document).ready(function(){
+    $("#tout").addClass("on");
+
+    $("#cycleUn").click(function(){
+        $(".tout").hide();
+        $(".cycleUn").show();
+        $("#tout, #cycleDeux, #cycleTrois").removeClass("on");
+        $("#cycleUn").addClass("on");
+    });
+    $("#cycleDeux").click(function(){
+        $(".tout").hide();
+        $(".cycleDeux").show();
+        $("#tout, #cycleUn, #cycleTrois").removeClass("on");
+        $("#cycleDeux").addClass("on");
+    });
+    $("#cycleTrois").click(function(){
+        $(".tout").hide();
+        $(".cycleTrois").show();
+        $("#tout, #cycleUn, #cycleDeux").removeClass("on");
+        $("#cycleTrois").addClass("on");
+    });
+    $("#tout").click(function(){
+        $(".tout").show();
+        $("#cycleUn, #cycleDeux, #cycleTrois").removeClass("on");
+        $("#tout").addClass("on");
+    });
+})

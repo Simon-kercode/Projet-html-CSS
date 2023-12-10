@@ -42,8 +42,13 @@ body {
     font-size: 14px;
     background: url(images/fond-op.jpg) repeat;
     background-size: 70%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
+main {
+    flex: 1;
+}
 .container {
     max-width: 1200px;
     width: 100%;
@@ -57,6 +62,7 @@ ul {
     list-style-type: none;
 }
 /* ==================header================= */
+
 #boutonsHaut {
     display: flex;
 }
@@ -153,6 +159,10 @@ ul {
     width: 100%;
     display: none;
 }
+#menuPrincipal #menuDesktop .surMenu:hover,
+#menuPrincipal #menuDesktop .surMenu.navOn {
+    color: #0b0b0b;
+}
 #menuPrincipal #menuDesktop .sousMenu {
     position: absolute;
     z-index: 9999;
@@ -177,10 +187,6 @@ ul {
     -moz-transform:scale(1.2);
     transform: scale(1.2);
 } */
-.on {
-    
-    color: var(--jaune-moutarde);
-}
 
 /* ================texte accueil=============== */
 #accueil {
@@ -194,10 +200,11 @@ ul {
 #accueil #texteAccueil h1 {
     margin-bottom: 20px;
     font-family: 'letters_for_learnersregular';
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 #accueil #texteAccueil p {
     line-height: 30px;
+    font-size: 1.0rem;
 }
 #accueil #texteAccueil #boutonAccueil {
     text-align: right;
@@ -341,6 +348,7 @@ ul {
     margin-top: 40px;
     background: url(images/fond-texture-bois-marron-blanc.jpg);
     background-size: 100% 130px;
+    
 }   
 
 #pied #bas #logo-ec,
@@ -458,11 +466,33 @@ ul {
 }
 
 /* ===================page news===================== */
-#titreNews {
+#newsHeader #titreNews {
     font-family: 'letters_for_learnersregular';
     font-size: 2rem;
     margin-bottom: 20px;
     margin-left: 15px;
+}
+#newsHeader p {
+    font-size: 1.05rem;
+    text-align: center;
+}
+#newsHeader #menuNews ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+#newsHeader #menuNews ul li {
+    margin: 40px 20px 40px;
+}
+#newsHeader #menuNews ul li a {
+    color: black;
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 10px;
+}
+#newsHeader #menuNews ul li a:hover,
+#newsHeader #menuNews ul li a.on  {
+    background-color: var(--jaune-moutarde);
 }
 .grid {
     width: 100%;
@@ -519,8 +549,28 @@ ul {
     width: 90%;
     margin: 20px auto;
 }
+/* ===============futures pages============== */
+#futurePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+#futurePage p {
+    margin-top: 20px;
+}
+
 /* ===============responsive============= */
+@media screen and (min-width: 576px) {
+/* ===============page news=============== */
+    #newsHeader #menuNews ul {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 @media screen and (min-width: 768px) {
+    
     /* =================header============= */
     #banner {
         flex-direction: row;
@@ -543,9 +593,6 @@ ul {
         margin-left: 15px;
     }
     #menuMobile {
-        display: none;
-    }
-    #menuPrincipal #menuDesktop #menuAccueil {
         display: none;
     }
     #menuPrincipal #menuDesktop {
