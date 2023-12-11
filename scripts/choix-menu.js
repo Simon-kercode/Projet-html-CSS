@@ -44,8 +44,8 @@ $("#menuPrincipal #assoc").click(function() {
 // Gère le clic en dehors du menu pour retirer la classe "navOn"
 $(document).click(function(event) {
     // Vérifie si l'élément cliqué est en dehors des menus
+    // closest vérifie si l'élément cliqué ou l'un de ses ancêtres a l'ID #menuPrincipal
     if (!$(event.target).closest("#menuPrincipal").length) {
-        // Vérifie la largeur de l'écran
         if (($(window).width()) < 768) {
         // Retire la classe "navOn" de tous les éléments et masque tous les menus
         $("#menuPrincipal #menuMobile .navOn").removeClass("navOn");
