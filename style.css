@@ -465,6 +465,15 @@ ul {
 #formContact #send {
     background-color: grey;
 }
+.mainContact #map {
+    width: 90%;
+    margin: 30px auto;
+}
+.mainContact #map iframe {
+    height: 400px;
+    width: 100%;
+    border: none;
+}
 
 /* ===================page news===================== */
 #newsHeader #titreNews {

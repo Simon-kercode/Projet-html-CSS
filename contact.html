@@ -91,39 +91,43 @@
         <p id="texteContact">Adressez nous votre demande à l'aide du formulaire ci dessous. 
             L'équipe enseignante fera tout son possible pour vous répondre dans les meilleurs délais.
         </p>
-        <form id="formContact" action="envoerForm.php" method="post">
-            <p>
-                Civilité :
-                <input type="radio" id="civM" name="civilité" value="M.">
-                <label for="civM">M.</label>
-                <input type="radio" id="civMme" name="civilité" value="Mme">
-                <label for="civMme">Mme</label>
-            </p>
-            <p>
-                <input type="text" name="nom" placeholder="Votre Nom *">
-                <input type="text" name="prenom" placeholder="Votre Prénom *">
-            </p>
-            <p>
-                <input type="email" name="email" placeholder="Votre E-mail *">
-            </p>
-            <p>
-                <input type="text" name="sujet" placeholder="Sujet *">
-            </p>
-            <p>
-                <textarea name="message" id="message" placeholder="Comment pouvons-nous vous aider ?" cols="30" rows="10">
-                </textarea>
-            </p>
-            <p>
-                <input type="checkbox" id="rgpd" name="rgpd" value="rgpd">
-                <label for="rgpd">J'autorise ce site à utiliser mes données personnelles
-                    selon notre <a href="#">politique de confidentialité</a>
-                </label>
-            </p>
-            <p> <input class="bouton" type="reset" value="Annuler">
-                <input id="send" class="bouton" id="boutonEnvoyer" type="submit" value="Envoyer">
-            </p>
-        </form>
-    </main>
+        
+            <form id="formContact" action="envoerForm.php" method="post">
+                <p>
+                    Civilité :
+                    <input type="radio" id="civM" name="civilité" value="M.">
+                    <label for="civM">M.</label>
+                    <input type="radio" id="civMme" name="civilité" value="Mme">
+                    <label for="civMme">Mme</label>
+                </p>
+                <p>
+                    <input type="text" name="nom" placeholder="Votre Nom *">
+                    <input type="text" name="prenom" placeholder="Votre Prénom *">
+                </p>
+                <p>
+                    <input type="email" name="email" placeholder="Votre E-mail *">
+                </p>
+                <p>
+                    <input type="text" name="sujet" placeholder="Sujet *">
+                </p>
+                <p>
+                    <textarea name="message" id="message" placeholder="Comment pouvons-nous vous aider ?" cols="30" rows="10">
+                    </textarea>
+                </p>
+                <p>
+                    <input type="checkbox" id="rgpd" name="rgpd" value="rgpd">
+                    <label for="rgpd">J'autorise ce site à utiliser mes données personnelles
+                        selon notre <a href="#">politique de confidentialité</a>
+                    </label>
+                </p>
+                <p> <input class="bouton" type="reset" value="Annuler">
+                    <input id="send" class="bouton" id="boutonEnvoyer" type="submit" value="Envoyer">
+                </p>
+            </form>
+            <figure id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2682.134018382537!2d-2.8453430594381235!3d47.75945479252815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x481022fff57421c5%3A0x8add475ee56e83e4!2s%C3%89cole%20Sainte-Marie!5e0!3m2!1sfr!2sfr!4v1702294595667!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </figure>
+        </main>
         <!-- footer -->
         <footer id="pied" class="container">
             <aside id="bas" class="container">
