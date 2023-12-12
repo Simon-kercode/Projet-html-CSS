@@ -7,8 +7,7 @@
     <!-- stylesheet slider -->
     <link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
-    <!-- stylesheet burger -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,12 +18,12 @@
             <a id="contactLink" href="contact.html">Contact</a>
         </div>
         <div id="banner">
-            <a href="index.html"><img id="logoEcole" src="images/logo-ecole.png" alt="Ecole Sainte Marie">
+            <a href="index.html"><img id="logoEcole" src="images/logo-ecole.webp" alt="Ecole Sainte Marie">
                 </a>     
             <nav id="menuPrincipal" class="container">
                 <!-- menu burger -->
                 <div id="burger">
-                    <i class="fa-solid fa-bars"></i>
+                    <img src="images/burger.svg" alt="menu burger">
                 </div>
                 <!-- menu de navigation mobile-->
                 <ul id="menuMobile">
@@ -104,55 +103,55 @@
         <div class="grid container">
             <a href="#">
                 <figure class="tout cycleTrois">
-                    <img src="images/belle-ile-redim.jpg"  alt="sejour-belle-ile" title="séjour Belle Ile"/>
+                    <img src="images/belle-ile-redim.webp"  alt="sejour-belle-ile" title="séjour Belle Ile"/>
                     <figcaption class="titreBlanc">Séjour à Belle Ile en Mer Cycle 3</figcaption>
                 </figure>
             </a>
             <a href="#">
                 <figure class="tout cycleTrois">    
-                    <img src="images/escape-game.PNG"  alt="escape-game" title="escape game"/>
+                    <img src="images/escape-game.webp"  alt="escape-game" title="escape game"/>
                     <figcaption class="titreNoir">Escape Game Cycle 3</figcaption>
                 </figure>
             </a>
             <a href="#">
                 <figure class="tout cycleTrois">    
-                    <img src="images/conseil-municipal-jeunes.PNG"  alt="conseil-municipal" title="conseil municipal jeunes"/>
+                    <img src="images/conseil-municipal-jeunes.webp"  alt="conseil-municipal" title="conseil municipal jeunes"/>
                     <figcaption class="titreBlanc">Conseil municipal des jeunes Cycle 3</figcaption>
                 </figure>
             </a>
             <a href="#">
                 <figure class="tout cycleDeux">    
-                    <img src="images/contes-orientaux-redim.jpg"  alt="contes-orientaux" title="contes orientaux"/>
+                    <img src="images/contes-orientaux-redim.webp"  alt="contes-orientaux" title="contes orientaux"/>
                     <figcaption class="titreBlanc">Contes orientaux Cycle 2</figcaption>
                 </figure>
             </a>
             <a href="#">
                 <figure class="tout cycleDeux">    
-                    <img src="images/rencontre-auteur.PNG"  alt="rencontre-auteur" title="rencontre avec auteur"/>
+                    <img src="images/rencontre-auteur.webp"  alt="rencontre-auteur" title="rencontre avec auteur"/>
                     <figcaption class="titreBlanc">Rencontre avec un auteur Cycle 2</figcaption>
                 </figure>
             </a>
             <a href="#">
                 <figure class="tout"> 
-                    <img src="images/lipdub-redim.jpg"  alt="lipdub" title="LipDub"/>
+                    <img src="images/lipdub-redim.webp"  alt="lipdub" title="LipDub"/>
                     <figcaption class="titreNoir">Lip'Dub de l'école</figcaption>
                 </figure>
             </a>
             <a href="#">
                 <figure class="tout cycleUn">    
-                    <img src="images/musique-du-monde-redim.jpg"  alt="musiques du monde" title="musiques du mone"/>
+                    <img src="images/musique-du-monde-redim.webp"  alt="musiques du monde" title="musiques du mone"/>
                     <figcaption class="titreBlanc">Musiques du monde Cycle 1</figcaption>
                 </figure>
             </a>
             <a href="#">
                 <figure class="tout cycleUn">    
-                    <img src="images/tennis-redim.jpg"  alt="tennis" title="tennis"/>
+                    <img src="images/tennis-redim.webp"  alt="tennis" title="tennis"/>
                     <figcaption class="titreNoir">Initiation au tennis Cycle 1</figcaption>
                 </figure>
             </a>
             <a href="#">
                 <figure class="tout">    
-                    <img src="images/celeb-rentree-redim.jpg"  alt="rentree" title="celebration rentree"/>
+                    <img src="images/celeb-rentree-redim.webp"  alt="rentree" title="celebration rentree"/>
                     <figcaption class="titreBlanc">Célébration de rentrée</figcaption>
                 </figure>
             </a>
@@ -163,7 +162,7 @@
             <aside id="bas" class="container">
                 <div id="colonne1" class="colonne">   
                     <a href="https://www.grandchamp.fr/">
-                        <img src="images/vignette-logo-grand-champ-removebg-preview.png" alt="grand-champ" id="logo-gc">
+                        <img src="images/vignette-logo-grand-champ-removebg-preview.webp" alt="grand-champ" id="logo-gc">
                     </a>
                     <address>
                         Ecole Sainte Marie<br>
@@ -191,15 +190,8 @@
         <script type="text/javascript" src="scripts/scripts-news.js"></script>
         <script src="scripts/jquery.nivo.slider.js"></script>
         <script type="text/javascript">
-            // script slider
-            $(window).load(function() {
-            $('#slider-accueil').nivoSlider();
-            });
-            $(window).load(function() {
-            $('#slider-news').nivoSlider();
-            });
             // script burger
-            $("#menuPrincipal #burger i").click(function() {
+            $("#menuPrincipal #burger img").click(function() {
             $("#menuPrincipal #menuMobile").slideToggle(500)
             });
         </script>

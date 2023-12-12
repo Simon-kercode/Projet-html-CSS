@@ -34,12 +34,12 @@ html, body {
          url('fonts/letters_for_learners-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-display: swap;
 }
 body {
     font-family: 'Poppins';
     font-size: 14px;
-    background: url(images/fond-op.jpg) repeat;
+    background: url(images/fond-op.webp) repeat;
     background-size: 70%;
     display: flex;
     flex-direction: column;
@@ -88,7 +88,7 @@ ul {
     text-align: right;
 }
 #banner {
-    background: url(images/fond-texture-bois-marron-blanc.jpg);
+    background: url(images/fond-bois.webp);
     background-size: 100% 75px;
     background-repeat: repeat-x;
     display: flex;
@@ -100,8 +100,8 @@ ul {
    margin-top: -10px;
    width: 220px; 
 }
-#menuPrincipal #burger {
-    font-size: 2.5rem;
+#menuPrincipal #burger img {
+    width: 35px;
 }
 #menuPrincipal {
     display: flex;
@@ -178,6 +178,14 @@ ul {
     padding-left: 30px;
 }
 
+/* ===========slider / image illustration============== */
+.sliderDesktop {
+    display: none;
+}
+#imageMobile {
+    width: 100%;
+    margin-bottom: 30px;
+}
 /* ================bloc accueil=============== */
 #accueil {
     width: 95%;
@@ -336,7 +344,7 @@ ul {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-    background: url(images/fond-texture-bois-marron-blanc.jpg);
+    background: url(images/fond-bois.webp);
     background-size: 100% 130px;
     
 }   
@@ -680,6 +688,14 @@ ul {
         width: 40%;
     }
 
+    /* ===============slider================= */
+    .sliderDesktop {
+        display: block;
+    }
+    #imageMobile {
+        display: none;
+    }
+    /* =================bloc news============= */
      #news .slider-wrapper {
         display: none;
     }
