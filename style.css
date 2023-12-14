@@ -191,6 +191,7 @@ ul {
     width: 95%;
     display: flex;
     border: solid var(--jaune-moutarde) 3px;
+    background-color: white;
     padding: 20px 15px;
     box-sizing: border-box;
 }
@@ -567,6 +568,9 @@ ul {
     margin-top: 20px;
 }
 /* =================page inscriptions=========== */
+.mainInscription {
+    background-color: white;
+}
 .mainInscription #titreInscription {
     font-family: 'letters_for_learnersregular';
     font-size: 2.5rem;
