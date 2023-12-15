@@ -543,6 +543,9 @@ ul {
 }
 
 /* ===============page mentions légales============= */
+.mainML {
+    background-color: white;
+}
 .mainML #titreML {
     font-family: 'letters_for_learnersregular';
     font-size: 2.5rem;
